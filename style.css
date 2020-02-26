@@ -4,8 +4,8 @@ td {
 	width: 100px;
 	text-align: center;
 	vertical-align: middle;
-    font-size: 50px;
-    font-family: europa, sans-serif;
+	font-size: 50px;
+	font-family: europa, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	cursor: pointer;
@@ -61,26 +61,26 @@ table tr td:last-child {
 }
 
 button {
-    margin: 80vh auto;
-    display: block;
-    text-decoration: none;
-    border: none;
-    padding: 10px 15px;
-    background-color: #1da7ea;
-    font-family: europa, sans-serif;
+	margin: 80vh auto;
+	display: block;
+	text-decoration: none;
+	border: none;
+	padding: 10px 15px;
+	background-color: #1da7ea;
+	font-family: europa, sans-serif;
 	font-weight: 400;
-    font-style: normal;
-    color: white;
+	font-style: normal;
+	color: white;
 	box-shadow: 5px 7px 5px rgb(160, 160, 160);
-    border-radius: 10px;
+	border-radius: 10px;
 }
 
 button:hover {
-    background-color: #1996d4;
+	background-color: #1996d4;
 }
 
 button:active {
-    background-color: #1996d4;
+	background-color: #1996d4;
 	box-shadow: 3px 4px 5px rgb(160, 160, 160);
-    transform: translate(2px, 3px);
-  }
+	transform: translate(2px, 3px);
+}

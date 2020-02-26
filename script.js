@@ -29,11 +29,40 @@ function turnClick(square) {
 	if (typeof origBoard[square.target.id] == "number") {
 		turn(square.target.id, humanPlayer);
 
-		if (!checkWin(origBoard, humanPlayer) && !checkTie()) {
+		if (!checkWin(origBoard, humanPlayer) && !checkTie() && Math.random(0, 1) > 0.1) {
 			setTimeout(() => {
 				turn(bestSpot(), aiPlayer);
 			}, 200);
+		} else {
+			setTimeout(() => {
+				for (let i = 0; i < 8; i++) {
+					let thingy = (Math.floor(Math.random() * 9));
+					let index = (thingy != emptySquares[i]) ? thingy : setTimeout(() => {
+						turn(index, aiPlayer);
+					}, 200);
+				}
+				turn(thingy);
+			}, 200);
 		}
+
+		/*
+		if (typeof origBoard[square.target.id] == "number") {
+		turn(square.target.id, humanPlayer);
+
+		if (!checkWin(origBoard, humanPlayer) && !checkTie() && Math.random(0, 1) > 0.9) {
+			setTimeout(() => {
+				turn(bestSpot(), aiPlayer);
+			}, 200);
+			console.log("win");
+		} else {
+			setTimeout(() => {
+				turn(Math.floor(Math.random(0, 8)), aiPlayer);
+			}, 200);
+			console.log(Math.floor(Math.random(0, 8)));
+		}
+	}
+
+		*/
 	}
 
 	function turn(squareId, player) {
@@ -139,6 +168,7 @@ function turnClick(square) {
 				if (moves[i].score < bestScore) {
 					bestScore = moves[i].score;
 					bestMove = i;
+					console.log("logarithm");
 				}
 			}
 		}
